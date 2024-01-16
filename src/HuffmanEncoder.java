@@ -74,7 +74,7 @@ public class HuffmanEncoder {
         }
         public String decompress(final HuffmanEncodedResult result )
         {
-            final StringBuilder resultBuilder=new StringBuilder();
+             StringBuilder resultBuilder=new StringBuilder();
             Node current=result.getRoot();
             int i=0;
             while(i<result.getEncodedData().length())
@@ -102,9 +102,9 @@ public class HuffmanEncoder {
         static class Node implements Comparable<Node>
         {
             private final char character;
-            private int frequency;
-            private Node leftChild;
-            private Node rightChild;
+            final private int frequency;
+            final private Node leftChild;
+            final private Node rightChild;
             private Node(char character,int frequency,Node leftChild,Node rightChild)
             {
                 this.character=character;
